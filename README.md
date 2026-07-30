@@ -162,14 +162,14 @@ rankings unchanged). The per-image hashes and the affected groups are provided i
 
 ## Figures
 
-`figures/` contains the manuscript figures as vector PDF with a PNG preview.
+`figures/` contains the manuscript figures as vector PDF.
 Plot figures are regenerated deterministically from the result CSVs by
 `code/regen_figs_bigfont.py`; the Grad-CAM panels are in `figures/figure6a-c.png`.
 
 ## Citation
 
 Ulaş Yurtsever, "Cross-Domain Evaluation of Modern Deep Learning Architectures for
-Microscopic Diatom Classification," *IEEE Access*. A BibTeX entry will be added on
+Microscopic Diatom Classification," A BibTeX entry will be added on
 publication.
 
 ## License
