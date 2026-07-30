@@ -1,0 +1,7 @@
+domain,n_files_metadata,n_files_in_manifest,n_metadata_files_missing_on_disk,n_files_on_disk_total_raw,status
+ADIAC_Database,2594,2594,0,3051,OK
+AFD_Database,1148,1148,0,1442,OK
+DIA_Database,863,863,0,905,OK
+DONA_Database,5486,5486,0,6814,OK
+FCE_LTER_Database,509,509,0,623,OK
+LOIR_Database,1753,1753,0,2067,OK

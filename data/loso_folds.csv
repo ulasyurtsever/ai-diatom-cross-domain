@@ -1,0 +1,7 @@
+fold_id,held_out_domain,training_domains,n_test_images,n_train_images
+0,ADIAC_Database,"AFD_Database,DIA_Database,DONA_Database,FCE_LTER_Database,LOIR_Database",2253,6786
+1,AFD_Database,"ADIAC_Database,DIA_Database,DONA_Database,FCE_LTER_Database,LOIR_Database",697,8342
+2,DIA_Database,"ADIAC_Database,AFD_Database,DONA_Database,FCE_LTER_Database,LOIR_Database",777,8262
+3,DONA_Database,"ADIAC_Database,AFD_Database,DIA_Database,FCE_LTER_Database,LOIR_Database",3775,5264
+4,FCE_LTER_Database,"ADIAC_Database,AFD_Database,DIA_Database,DONA_Database,LOIR_Database",358,8681
+5,LOIR_Database,"ADIAC_Database,AFD_Database,DIA_Database,DONA_Database,FCE_LTER_Database",1179,7860
