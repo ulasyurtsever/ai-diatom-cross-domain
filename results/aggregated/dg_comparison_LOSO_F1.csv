@@ -1,0 +1,6 @@
+Model,coral,erm,mixstyle,delta_coral,delta_mixstyle
+resnet50,0.3776,0.3564,0.4221,0.0212,0.0657
+efficientnet_v2_s,0.4531,0.4715,,-0.0184,
+convnext_tiny,0.4876,0.4897,0.5257,-0.0021,0.036
+swin_v2_t,0.4204,0.4269,,-0.0065,
+maxvit_t,0.4983,0.5084,,-0.0101,

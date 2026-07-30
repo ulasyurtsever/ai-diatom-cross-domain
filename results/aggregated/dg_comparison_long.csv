@@ -1,0 +1,13 @@
+Model,Method,Acc,F1
+convnext_tiny,coral,0.6259,0.4876
+convnext_tiny,erm,0.6319,0.4897
+convnext_tiny,mixstyle,0.6416,0.5257
+efficientnet_v2_s,coral,0.5817,0.4531
+efficientnet_v2_s,erm,0.6071,0.4715
+maxvit_t,coral,0.6133,0.4983
+maxvit_t,erm,0.6201,0.5084
+resnet50,coral,0.4771,0.3776
+resnet50,erm,0.4704,0.3564
+resnet50,mixstyle,0.515,0.4221
+swin_v2_t,coral,0.5439,0.4204
+swin_v2_t,erm,0.5468,0.4269

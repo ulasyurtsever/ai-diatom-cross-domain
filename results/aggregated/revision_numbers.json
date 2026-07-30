@@ -1,0 +1,287 @@
+{
+  "multiseed_LOSO": [
+    {
+      "Model": "resnet50",
+      "Acc_mean": 0.4836,
+      "Acc_std": 0.0117,
+      "F1_mean": 0.3768,
+      "F1_std": 0.0185,
+      "n_seeds": 3
+    },
+    {
+      "Model": "efficientnet_v2_s",
+      "Acc_mean": 0.6074,
+      "Acc_std": 0.0113,
+      "F1_mean": 0.4845,
+      "F1_std": 0.014,
+      "n_seeds": 3
+    },
+    {
+      "Model": "convnext_tiny",
+      "Acc_mean": 0.6318,
+      "Acc_std": 0.0145,
+      "F1_mean": 0.5026,
+      "F1_std": 0.0132,
+      "n_seeds": 3
+    },
+    {
+      "Model": "swin_v2_t",
+      "Acc_mean": 0.5488,
+      "Acc_std": 0.0018,
+      "F1_mean": 0.4311,
+      "F1_std": 0.0037,
+      "n_seeds": 3
+    },
+    {
+      "Model": "maxvit_t",
+      "Acc_mean": 0.6223,
+      "Acc_std": 0.0089,
+      "F1_mean": 0.5147,
+      "F1_std": 0.0062,
+      "n_seeds": 3
+    }
+  ],
+  "kendall_W_seeds": 0.9556,
+  "friedman_multiseed": {
+    "chi2": 16.4,
+    "p": 0.0025268128437437197
+  },
+  "dg_comparison": [
+    {
+      "Model": "resnet50",
+      "coral": 0.3776,
+      "erm": 0.3564,
+      "mixstyle": 0.4221,
+      "delta_coral": 0.0212,
+      "delta_mixstyle": 0.0657
+    },
+    {
+      "Model": "efficientnet_v2_s",
+      "coral": 0.4531,
+      "erm": 0.4715,
+      "mixstyle": NaN,
+      "delta_coral": -0.0184,
+      "delta_mixstyle": NaN
+    },
+    {
+      "Model": "convnext_tiny",
+      "coral": 0.4876,
+      "erm": 0.4897,
+      "mixstyle": 0.5257,
+      "delta_coral": -0.0021,
+      "delta_mixstyle": 0.036
+    },
+    {
+      "Model": "swin_v2_t",
+      "coral": 0.4204,
+      "erm": 0.4269,
+      "mixstyle": NaN,
+      "delta_coral": -0.0065,
+      "delta_mixstyle": NaN
+    },
+    {
+      "Model": "maxvit_t",
+      "coral": 0.4983,
+      "erm": 0.5084,
+      "mixstyle": NaN,
+      "delta_coral": -0.0101,
+      "delta_mixstyle": NaN
+    }
+  ],
+  "ablation": [
+    {
+      "Variant": "full",
+      "Acc": 0.6319,
+      "F1": 0.4897,
+      "dF1_vs_full": 0.0
+    },
+    {
+      "Variant": "no_augmentation",
+      "Acc": 0.6392,
+      "F1": 0.5015,
+      "dF1_vs_full": 0.0118
+    },
+    {
+      "Variant": "geometric_only",
+      "Acc": 0.632,
+      "F1": 0.5088,
+      "dF1_vs_full": 0.0191
+    },
+    {
+      "Variant": "photometric_only",
+      "Acc": 0.6184,
+      "F1": 0.4775,
+      "dF1_vs_full": -0.0122
+    },
+    {
+      "Variant": "no_random_erase",
+      "Acc": 0.6336,
+      "F1": 0.4953,
+      "dF1_vs_full": 0.0056
+    }
+  ],
+  "sensitivity": [
+    {
+      "Factor": "aug_intensity",
+      "Value": "default",
+      "Acc_mean": 0.6979,
+      "Acc_std": 0.0764,
+      "F1_mean": 0.5359,
+      "F1_std": 0.1576
+    },
+    {
+      "Factor": "aug_intensity",
+      "Value": "light",
+      "Acc_mean": 0.6642,
+      "Acc_std": 0.0864,
+      "F1_mean": 0.5478,
+      "F1_std": 0.1537
+    },
+    {
+      "Factor": "aug_intensity",
+      "Value": "strong",
+      "Acc_mean": 0.7073,
+      "Acc_std": 0.0636,
+      "F1_mean": 0.5446,
+      "F1_std": 0.1281
+    },
+    {
+      "Factor": "batch",
+      "Value": 64,
+      "Acc_mean": 0.6928,
+      "Acc_std": 0.0766,
+      "F1_mean": 0.5504,
+      "F1_std": 0.1337
+    },
+    {
+      "Factor": "batch",
+      "Value": 128,
+      "Acc_mean": 0.6979,
+      "Acc_std": 0.0764,
+      "F1_mean": 0.5359,
+      "F1_std": 0.1576
+    },
+    {
+      "Factor": "batch",
+      "Value": 256,
+      "Acc_mean": 0.6706,
+      "Acc_std": 0.0547,
+      "F1_mean": 0.5475,
+      "F1_std": 0.1406
+    },
+    {
+      "Factor": "lr",
+      "Value": 0.0001,
+      "Acc_mean": 0.6979,
+      "Acc_std": 0.0764,
+      "F1_mean": 0.5359,
+      "F1_std": 0.1576
+    },
+    {
+      "Factor": "lr",
+      "Value": 0.0003,
+      "Acc_mean": 0.5876,
+      "Acc_std": 0.0692,
+      "F1_mean": 0.447,
+      "F1_std": 0.0866
+    },
+    {
+      "Factor": "resolution",
+      "Value": 224,
+      "Acc_mean": 0.6979,
+      "Acc_std": 0.0764,
+      "F1_mean": 0.5359,
+      "F1_std": 0.1576
+    },
+    {
+      "Factor": "resolution",
+      "Value": "native",
+      "Acc_mean": 0.6979,
+      "Acc_std": 0.0764,
+      "F1_mean": 0.5359,
+      "F1_std": 0.1576
+    }
+  ],
+  "efficiency": [
+    {
+      "Model": "resnet50",
+      "InputRes": 224,
+      "Params_M": 23.56,
+      "ModelSize_MB": 89.9,
+      "GFLOPs": 4.11,
+      "Latency_ms_mean": 4.761,
+      "Latency_ms_std": 1.585,
+      "Throughput_img_s": 3053.3,
+      "PeakGPUMem_MB": 234.5,
+      "Device": "Single-GPU (NVIDIA RTX 6000 Ada Generation)"
+    },
+    {
+      "Model": "efficientnet_v2_s",
+      "InputRes": 384,
+      "Params_M": 20.21,
+      "ModelSize_MB": 77.1,
+      "GFLOPs": 8.45,
+      "Latency_ms_mean": 12.694,
+      "Latency_ms_std": 0.304,
+      "Throughput_img_s": 1002.8,
+      "PeakGPUMem_MB": 239.2,
+      "Device": "Single-GPU (NVIDIA RTX 6000 Ada Generation)"
+    },
+    {
+      "Model": "convnext_tiny",
+      "InputRes": 224,
+      "Params_M": 27.84,
+      "ModelSize_MB": 106.2,
+      "GFLOPs": 4.47,
+      "Latency_ms_mean": 3.967,
+      "Latency_ms_std": 0.308,
+      "Throughput_img_s": 1578.5,
+      "PeakGPUMem_MB": 182.1,
+      "Device": "Single-GPU (NVIDIA RTX 6000 Ada Generation)"
+    },
+    {
+      "Model": "swin_v2_t",
+      "InputRes": 256,
+      "Params_M": 27.6,
+      "ModelSize_MB": 105.3,
+      "GFLOPs": 5.96,
+      "Latency_ms_mean": 11.587,
+      "Latency_ms_std": 1.751,
+      "Throughput_img_s": 886.0,
+      "PeakGPUMem_MB": 151.8,
+      "Device": "Single-GPU (NVIDIA RTX 6000 Ada Generation)"
+    },
+    {
+      "Model": "maxvit_t",
+      "InputRes": 224,
+      "Params_M": 30.42,
+      "ModelSize_MB": 116.0,
+      "GFLOPs": 5.61,
+      "Latency_ms_mean": 18.398,
+      "Latency_ms_std": 0.402,
+      "Throughput_img_s": 819.0,
+      "PeakGPUMem_MB": 285.5,
+      "Device": "Single-GPU (NVIDIA RTX 6000 Ada Generation)"
+    }
+  ],
+  "imbalance_loss": [
+    {
+      "Loss": "WCE",
+      "Acc": 0.6319,
+      "F1": 0.4897,
+      "dF1_vs_WCE": 0.0
+    },
+    {
+      "Loss": "FOCAL",
+      "Acc": 0.6451,
+      "F1": 0.51,
+      "dF1_vs_WCE": 0.0203
+    },
+    {
+      "Loss": "CE",
+      "Acc": 0.6454,
+      "F1": 0.5073,
+      "dF1_vs_WCE": 0.0176
+    }
+  ]
+}

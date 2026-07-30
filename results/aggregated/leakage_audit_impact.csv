@@ -1,0 +1,11 @@
+scenario,model,acc,acc_clean,acc_delta,macroF1,macroF1_clean,macroF1_delta,leaked_test_removed
+Single,resnet50,94.87,95.1,-0.23,94.79,94.91,-0.13,1.0
+Single,efficientnet_v2_s,98.17,98.16,0.01,99.37,99.37,0.0,1.0
+Single,convnext_tiny,96.58,96.57,0.01,94.19,94.19,0.0,1.0
+Single,swin_v2_t,94.87,95.1,-0.23,95.97,96.44,-0.47,1.0
+Single,maxvit_t,96.34,96.32,0.01,95.75,95.75,0.0,1.0
+Standard,resnet50,87.28,87.23,0.05,84.08,83.91,0.17,5.0
+Standard,efficientnet_v2_s,89.88,89.94,-0.06,87.23,87.27,-0.03,5.0
+Standard,convnext_tiny,88.76,88.77,-0.01,85.9,85.9,-0.0,5.0
+Standard,swin_v2_t,87.23,87.2,0.02,84.08,83.99,0.09,5.0
+Standard,maxvit_t,89.95,89.94,0.01,87.08,86.98,0.1,5.0

@@ -1,0 +1,6 @@
+Variant,Acc,F1,dF1_vs_full
+full,0.6319,0.4897,0.0
+no_augmentation,0.6392,0.5015,0.0118
+geometric_only,0.632,0.5088,0.0191
+photometric_only,0.6184,0.4775,-0.0122
+no_random_erase,0.6336,0.4953,0.0056

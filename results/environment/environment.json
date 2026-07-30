@@ -1,0 +1,13 @@
+{
+  "python": "3.11.15 (main, Jun 11 2026, 15:20:16) [GCC 14.3.0]",
+  "platform": "Linux-5.15.0-78-generic-x86_64-with-glibc2.35",
+  "torch": "2.1.2+cu121",
+  "torchvision": "0.16.2+cu121",
+  "cuda": "12.1",
+  "cudnn": 8902,
+  "gpu_count": 1,
+  "gpus": [
+    "NVIDIA RTX 6000 Ada Generation"
+  ],
+  "git_commit": "n/a"
+}

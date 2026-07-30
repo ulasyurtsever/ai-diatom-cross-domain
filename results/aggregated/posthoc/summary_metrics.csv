@@ -1,0 +1,6 @@
+Model,MacroF1,MicroF1,BalancedAcc,N_test
+resnet50,0.4019,0.4923,0.4107,9039
+efficientnet_v2_s,0.5397,0.6255,0.5316,9039
+convnext_tiny,0.5476,0.6499,0.5496,9039
+swin_v2_t,0.4757,0.5551,0.4841,9039
+maxvit_t,0.5603,0.6347,0.5522,9039

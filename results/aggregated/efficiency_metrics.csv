@@ -1,0 +1,6 @@
+Model,InputRes,Params_M,ModelSize_MB,GFLOPs,Latency_ms_mean,Latency_ms_std,Throughput_img_s,PeakGPUMem_MB,Device
+resnet50,224,23.56,89.9,4.11,4.761,1.585,3053.3,234.5,Single-GPU (NVIDIA RTX 6000 Ada Generation)
+efficientnet_v2_s,384,20.21,77.1,8.45,12.694,0.304,1002.8,239.2,Single-GPU (NVIDIA RTX 6000 Ada Generation)
+convnext_tiny,224,27.84,106.2,4.47,3.967,0.308,1578.5,182.1,Single-GPU (NVIDIA RTX 6000 Ada Generation)
+swin_v2_t,256,27.6,105.3,5.96,11.587,1.751,886.0,151.8,Single-GPU (NVIDIA RTX 6000 Ada Generation)
+maxvit_t,224,30.42,116.0,5.61,18.398,0.402,819.0,285.5,Single-GPU (NVIDIA RTX 6000 Ada Generation)
