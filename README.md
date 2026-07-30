@@ -44,7 +44,7 @@ Holm correction) are in `results/aggregated/`.
 └── results/
     ├── aggregated/               Seed-averaged tables, statistics, post-hoc analyses
     ├── environment/              Captured software/hardware environment and pip freeze
-    └── per_experiment_predictions.tar.gz   Per-run predictions, indices, confusion matrices
+    └── per_experiment_predictions_part1.zip / _part2.zip   Per-run predictions, indices, confusion matrices (split into two archives)
 ```
 
 ## Dataset
@@ -85,9 +85,26 @@ before running those scripts:
 
 ```bash
 mkdir -p results_revision
-tar xzf results/per_experiment_predictions.tar.gz -C results_revision   # -> results_revision/{multiseed,ablation,dg}/
+unzip -o results/per_experiment_predictions_part1.zip -d results_revision
+unzip -o results/per_experiment_predictions_part2.zip -d results_revision   # both parts -> results_revision/{multiseed,ablation,dg}/
 cp -r results/aggregated results_revision/aggregated
 ```
+
+**Contents of the two prediction archives** (extract both into `results_revision/`):
+
+- `per_experiment_predictions_part1.zip` — `multiseed/seed_42/` and `multiseed/seed_202/`, plus the augmentation-ablation runs (`ablation/{full, geometric_only, photometric_only, no_random_erase}/`).
+- `per_experiment_predictions_part2.zip` — `multiseed/seed_1337/`, plus the domain-generalization baseline runs (`dg/{coral, mixstyle}/`).
+
+Each `multiseed/seed_*/` holds one directory per (backbone × scenario) run, named
+`S0_Single_*`, `S1_Standard_*`, and `S2_LOSO_*_<Database>` (40 runs per seed). Every
+run directory contains:
+
+- `test_predictions.csv` — per-sample predicted class probabilities;
+- `test_index.csv` — per-image `filepath, domain, label, True_Label, Predicted_Label, MaxProb, Correct`, mapping each prediction back to its image;
+- `final_metrics.csv` — accuracy, Macro-F1, AUC, wall-clock training time, and an energy estimate;
+- `confusion_matrix.csv` and the per-epoch `log.csv`.
+
+Together these files reproduce every reported number, table, and figure without retraining.
 
 The data-reading scripts locate the repository root automatically, so they can
 be run from any directory (or given explicit `--metadata` / `--data-root`).
@@ -106,6 +123,17 @@ be run from any directory (or given explicit `--metadata` / `--data-root`).
    and the label-matched cross-domain gap.
 5. **Figures** — `code/regen_figs_bigfont.py` regenerates the plot figures from the
    aggregated CSVs.
+
+## Model checkpoints
+
+The trained model weights (`.pth` checkpoints for each backbone, seed, and
+scenario) are not hosted in this repository because of their size (well beyond
+the practical GitHub file-size limits). They are available from the
+corresponding author on reasonable request. Note that the released
+per-experiment prediction files (`results/per_experiment_predictions_part1.zip` and `_part2.zip`)
+already reproduce every reported number, table, and figure without the
+checkpoints; the weights are needed only to re-use or fine-tune the trained
+models themselves.
 
 ## Hardware and training configuration
 
@@ -134,14 +162,14 @@ rankings unchanged). The per-image hashes and the affected groups are provided i
 
 ## Figures
 
-`figures/` contains the manuscript figures as vector PDF preview.
+`figures/` contains the manuscript figures as vector PDF with a PNG preview.
 Plot figures are regenerated deterministically from the result CSVs by
 `code/regen_figs_bigfont.py`; the Grad-CAM panels are in `figures/figure6a-c.png`.
 
 ## Citation
 
 Ulaş Yurtsever, "Cross-Domain Evaluation of Modern Deep Learning Architectures for
-Microscopic Diatom Classification," A BibTeX entry will be added on
+Microscopic Diatom Classification," *IEEE Access*. A BibTeX entry will be added on
 publication.
 
 ## License
