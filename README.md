@@ -11,8 +11,7 @@ baselines, ablations, and inference-efficiency measurements.
 This repository releases the curated metadata, deterministic fold definitions,
 per-experiment prediction files, statistical-analysis code, and figure-generation
 code required to reproduce every reported number without image re-acquisition or
-GPU access. The source images are redistributed from their original providers and
-are reconstructed locally from the six public databases (see **Dataset**).
+GPU access.
 
 ## Headline LOSO results (seed-averaged over {42, 202, 1337})
 
